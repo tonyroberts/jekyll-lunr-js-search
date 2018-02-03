@@ -24,7 +24,7 @@ module Jekyll
 
       def self.extract_title_and_url(item)
         data = item.to_liquid
-        [ data['title'], data['url'] ]
+        [ data['search_title'] || data['title'], data['url'] ]
       end
 
       attr_reader :title, :url, :date, :categories, :tags, :is_post, :body, :collection
